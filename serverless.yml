@@ -1,0 +1,25 @@
+
+
+service: contact-form
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: us-east-1
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "ses:SendEmail"
+      Resource: "*"
+
+functions:
+  app:
+    handler: handler.form
+    events:
+        - http: ANY /
+        - http: 'ANY {proxy+}'
+
+
+
+plugins:
+  - serverless-offline
