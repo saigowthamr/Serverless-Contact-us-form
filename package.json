@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "sls deploy",
+    "offline":"sls offline start"
   },
-  "keywords": [],
+  "keywords": ["serveless contact form","aws lambda"],
   "author": "",
   "license": "ISC",
   "dependencies": {
