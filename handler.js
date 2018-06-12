@@ -28,9 +28,9 @@ app.post("/", (req, res) => {
   const message = req.body.message;
 
   const emailParams = {
-    Source: "saigowthamr@gmail.com", // Your Verified Email
+    Source: "youremail@gmail.com", // Your Verified Email
     Destination: {
-      ToAddresses: ["saigowthamr@gmail.com"], // Your verfied Email
+      ToAddresses: ["youremail@gmail.com"], // 
     },
     ReplyToAddresses: [req.body.email],
     Message: {
